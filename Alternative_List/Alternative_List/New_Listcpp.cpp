@@ -3,7 +3,7 @@
 
 CLASS1 New_List_<T>::New_List_()
 {
-	*HEAD = new T;
+	*HEAD = new New_List_;
 	*TAIL = HEAD;
 	*prevPointer = nullptr;
 	*nextPointer = nullptr;

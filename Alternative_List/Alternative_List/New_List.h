@@ -2,7 +2,8 @@
 template<class T>class New_List_
 {
 protected:
-	T *prevPointer, *HEAD, *nextPointer, *TAIL, *data = nullptr;
+	New_List_ *prevPointer, *HEAD, *nextPointer, *TAIL;
+	T *data = nullptr;
 public:
 	New_List_();
 	void PUSH_BACK(T*);
