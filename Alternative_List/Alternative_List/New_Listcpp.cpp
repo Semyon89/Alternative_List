@@ -9,6 +9,7 @@ CLASS1 New_List_<T>::New_List_()
 	*prevPointer = nullptr;
 	*nextPointer = nullptr;
 	*TEMPLATE = new New_List_;
+	SIZE = 0;
 }
 
 template <class T> void New_List_<T>::PUSH_BACK(T data)
@@ -18,13 +19,42 @@ template <class T> void New_List_<T>::PUSH_BACK(T data)
 	if (Pointer->prevPointer == nullptr)
 		HEAD = Pointer;
 	Pointer->prevPointer = Pointer;
+	SIZE++;
+	TAIL = Pointer;
 	Pointer = Pointer->nextPointer;
 }
 
-CLASS1 void New_List_<T> ::POP_BACK(T data)
+CLASS1 void New_List_<T> ::PUSH_FRONT(T data)
 {	
 	TEMPLATE->data = data;
 	TEMPLATE->nextPointer = HEAD;
 	TEMPLATE->prevPointer = nullptr;
+	SIZE++;
 	HEAD = TEMPLATE;
+}
+
+template <class T> void New_List_<T>::POP_BACK()
+{
+	if (TAIL == nullptr)
+		std::cerr << "List is empty!";
+	delete Pointer->nextPointer;
+	Pointer = Pointer->prevPointer;
+	Pointer->nextPointer = nullptr;
+	TAIL = Pointer;
+	SIZE--;
+}
+
+CLASS1 void New_List_<T>::POP_FRONT()
+{
+	if (!HEAD)
+		std::cerr << "List is empty";
+	HEAD = HEAD->nextPointer;
+	delete HEAD->prevPointer;
+	HEAD->prevPointer = nullptr;
+	SIZE--;
+}
+
+template <class T> int New_List_<T>::SIZE()
+{
+	return SIZE;
 }
