@@ -15,4 +15,5 @@ public:
 	void PUSH_FRONT(T);
 	void POP_FRONT();
 	int SIZE();
+	bool EMPTY();
 };

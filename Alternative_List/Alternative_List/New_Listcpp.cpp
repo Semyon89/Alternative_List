@@ -31,6 +31,7 @@ CLASS1 void New_List_<T> ::PUSH_FRONT(T data)
 	TEMPLATE->prevPointer = nullptr;
 	SIZE++;
 	HEAD = TEMPLATE;
+	TEMPLATE = TEMPLATE->nextPointer = new New_List_;
 }
 
 template <class T> void New_List_<T>::POP_BACK()
@@ -57,4 +58,9 @@ CLASS1 void New_List_<T>::POP_FRONT()
 template <class T> int New_List_<T>::SIZE()
 {
 	return SIZE;
+}
+
+template<class T>bool New_List_<T>::EMPTY()
+{
+	return HEAD == nullptr;
 }
