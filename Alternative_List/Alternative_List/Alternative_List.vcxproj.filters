@@ -21,9 +21,15 @@
     <ClCompile Include="New_Listcpp.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="I_terator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="New_List.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="I_terator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

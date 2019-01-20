@@ -16,4 +16,6 @@ public:
 	void POP_FRONT();
 	int SIZE();
 	bool EMPTY();
+	New_List_ *begin();
+	New_List_ *end();
 };

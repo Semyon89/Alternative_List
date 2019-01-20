@@ -115,10 +115,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="I_terator.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="New_Listcpp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="I_terator.h" />
     <ClInclude Include="New_List.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

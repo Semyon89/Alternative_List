@@ -64,3 +64,13 @@ template<class T>bool New_List_<T>::EMPTY()
 {
 	return HEAD == nullptr;
 }
+
+template <class T> New_List_<T>* New_List_<T>::begin()
+{
+	return HEAD;
+}
+
+template <class T> New_List_<T>* New_List_<T>::end()
+{
+	return TAIL;
+}
